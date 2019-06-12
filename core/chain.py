@@ -13,7 +13,6 @@ class Chain:
         self.node_blocks = []
         self.sync()
 
-    # @static
     def sync(self):
         if os.path.exists(LEDGER_NAME):
             print('Ledger exists')
@@ -37,9 +36,8 @@ class Chain:
         return json.dumps(self.node_blocks)
 
     def genesis(self):
-        return Block(0, 4, 'first block', None)
+        return Block(0, 4, GENESIS, None)
 
-    # @static
     def mine(last):
         pass
 
