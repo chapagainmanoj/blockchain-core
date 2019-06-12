@@ -6,8 +6,8 @@ node = Flask(__name__)
 
 @node.route('/blockchain.json', methods = ['GET'])
 def blockchain():
-    chain = Chain()
-    blockchain = json.dumps(chain.node_blocks, indent=4)
+    a_node = Chain()
+    blockchain = json.dumps(a_node.node_blocks, indent=4)
     return blockchain
 
 if __name__ == '__main__':
